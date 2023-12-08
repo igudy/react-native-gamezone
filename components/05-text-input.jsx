@@ -1,8 +1,18 @@
 import React from 'react'
 
 const TextInput = () => {
+      const [name, setName] = useState("Goodness");
+  const [age, setAge] = useState(40);
+  // const [person, setPerson] = useState({ name: "Chief Igudy", age: 45 });
+
+  // const clickHandler = () => {
+  //   setName("Igunma");
+  //   setPerson({ name: "Ice Gudy", age: 34 });
+    // };
+    
   return (
-    <div>      <Text>Enter name:</Text>
+      <div>
+          <Text>Enter name:</Text>
       <TextInput
         multiline
         style={styles.input}

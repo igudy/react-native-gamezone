@@ -1,42 +1,29 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import {
+  FlatList,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 import StateManagement from "./components/state-management";
 import { useState } from "react";
 
 export default function App() {
-  const [name, setName] = useState("Goodness");
-  const [age, setAge] = useState(40);
-  // const [person, setPerson] = useState({ name: "Chief Igudy", age: 45 });
+  const [people, setPeople] = useState([
+    { name: "shaun", id: "1" },
+    { name: "johe", id: "2" },
+    { name: "hero", id: "3" },
+    { name: "joe", id: "4" },
+    { name: "shau", id: "5" },
+    { name: "shn", id: "6" },
+    { name: "aun", id: "7" },
+    { name: "aunt", id: "8" },
+    { name: "aunewr", id: "9" },
+  ]);
 
-  // const clickHandler = () => {
-  //   setName("Igunma");
-  //   setPerson({ name: "Ice Gudy", age: 34 });
-  // };
-
-  return (
-    <View style={styles.container}>
-      <Text>Enter name:</Text>
-      <TextInput
-        multiline
-        style={styles.input}
-        placeholder="e.g John Doe"
-        onChangeText={(val) => setName(val)}
-      />
-
-      <Text>Enter Age: </Text>
-      <TextInput
-        multiline
-        style={styles.input}
-        keyboardType="numeric"
-        placeholder="e.g John Doe"
-        onChangeText={(val) => setAge(val)}
-      />
-
-      <Text>
-        {name}, age:{age}
-      </Text>
-    </View>
-  );
+  return <View style={styles.container}></View>;
 }
 
 const styles = StyleSheet.create({
@@ -52,5 +39,13 @@ const styles = StyleSheet.create({
     padding: 8,
     margin: 10,
     width: 200,
+  },
+  item: {
+    marginTop: 24,
+    padding: 30,
+    backgroundColor: "pink",
+    fontSize: 30,
+    marginHorizontal: 20,
+    marginTop: 24,
   },
 });
