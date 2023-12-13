@@ -7,8 +7,6 @@ import {
   TextInput,
   View,
 } from "react-native";
-import StateManagement from "./components/state-management";
-import { useState } from "react";
 
 export default function People() {
 
