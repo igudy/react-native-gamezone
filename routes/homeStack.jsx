@@ -9,8 +9,8 @@ const Stack = createStackNavigator();
 function HomeStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="ReviewDetails" component={ReviewDetails} />
       <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="ReviewDetails" component={ReviewDetails} />
     </Stack.Navigator>
   );
 }

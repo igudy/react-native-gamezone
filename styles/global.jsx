@@ -6,7 +6,10 @@ export const globalStyles = StyleSheet.create({
     padding: 20,
   },
   titleText: {
-    fontFamily: "raleway-medium",
+    fontFamily: "raleway-bold",
+    // Google font
+    // fontFamily: "Raleway_200ExtraLight",
+    // fontFamily: "Quicksand_300Light",
     fontSize: 18,
     color: "#333",
   },
