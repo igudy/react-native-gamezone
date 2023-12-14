@@ -9,8 +9,10 @@ const Stack = createStackNavigator();
 function HomeStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="ReviewDetails" component={ReviewDetails} />
+      <Stack.Screen name="Home" options={{ title: "Gamezone" }} 
+   component={HomeScreen} />
+      <Stack.Screen name="ReviewDetails"  options={({ route }) => ({ title: route.params.title })}
+  component={ReviewDetails} />
     </Stack.Navigator>
   );
 }
