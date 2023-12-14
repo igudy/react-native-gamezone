@@ -1,15 +1,18 @@
-import { createStackNavigator } from "@react-navigation/stack";
-import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import ReviewDetails from "../screens/reviewDetails";
+import { createStackNavigator } from "@react-navigation/stack";
 import AboutScreen from '../screens/about';
+import Header from "../shared/header";
 
 const Stack = createStackNavigator();
 
-function AboutStack() {
+function AboutStack({navigation}) {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="About" options={{ title: "Gamezone" }} component={AboutScreen} />
+          <Stack.Screen name="About" options={{
+          header: () => (
+            <Header navigation={navigation} title={"About Gamezone"} />
+          ),
+        }} component={AboutScreen} />
     </Stack.Navigator>
   );
 }
